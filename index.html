@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Link Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>My Links</h1>
+            <button id="add-category-btn" class="primary-btn">+ New Category</button>
+        </header>
+
+        <main id="categories-container">
+            <!-- Categories will be injected here by JS -->
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="category-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="category-modal-title">Add Category</h2>
+            <form id="category-form">
+                <input type="hidden" id="category-id">
+                <input type="text" id="category-name" placeholder="Category Name" required>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="link-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="link-modal-title">Add Link</h2>
+            <form id="link-form">
+                <input type="hidden" id="link-category-id">
+                <input type="hidden" id="link-id">
+                <input type="text" id="link-title" placeholder="Link Title" required>
+                <input type="url" id="link-url" placeholder="https://example.com" required>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
